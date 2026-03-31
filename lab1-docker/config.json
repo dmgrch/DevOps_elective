@@ -1,0 +1,8 @@
+{
+  "ociVersion": "1.0.2",
+  "hostname": "lab-container",
+  "process": {
+    "cwd": "/",
+    "args": ["/bin/sh"]
+  }
+}
