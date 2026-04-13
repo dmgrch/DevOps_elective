@@ -4,7 +4,7 @@
 
 Для начала я установил kubectl и minicube.
 После этого я запустил кластер с помощью команды `minicube start` и проверил статус
-![1](/content/image.png)
+![1](content/image.png)
 
 Далее я создал 4 файла в папке `part1`:
 - configmap.yaml -- хранит конфигурационные данные приложения
@@ -13,10 +13,10 @@
 - kustomization.yaml -- объединяет несколько .yaml манифестов в один набор для удобного запуска одной командой
 
 После этого я запустил развертывание сервиса в kubernetes с помощью команды `kubectl apply -k .` и проверил созданные ресурсы
-![2](/content/image-1.png)
+![2](content/image-1.png)
 
 И в конце для провери работы сервиса в браузере я воспользовался командой `minikube service hello-service` и вот результат
-![3](/content/image-2.png)
+![3](content/image-2.png)
 
 
 ## 2 Часть
@@ -29,15 +29,15 @@
 - template/service.yaml
 
 После этого я установил приложение в кластер с помощью команды `helm install hello-release ./hello-chart`
-![4](/content/image-3.png)
+![4](content/image-3.png)
 
 Открыл адрес приложения в браузере
-![5](/content/image-4.png)
+![5](content/image-4.png)
 
 После этого я отредактировал текст и выполнил upgrade релиза. Проверил содержимое страницы в браузере
-![6](/content/image-5.png)
-![7](/content/image-6.png)
-![8](/content/image-7.png)
+![6](content/image-5.png)
+![7](content/image-6.png)
+![8](content/image-7.png)
 
 
 ## 3 причины, по которым использовать хелм удобнее чем классический деплой через кубернетис манифесты
