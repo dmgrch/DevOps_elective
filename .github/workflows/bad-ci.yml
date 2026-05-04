@@ -54,4 +54,4 @@ jobs:
       DB_PASSWORD: "supersecret123"
     steps:
       - name: Deploy (leak secret)
-        run: echo "Deploying with password: $DB_PASSWORD"
+        run: echo "Deploying ..."
