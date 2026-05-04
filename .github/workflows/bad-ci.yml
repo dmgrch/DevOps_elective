@@ -12,7 +12,7 @@ jobs:
           python-version: '3.x'
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build (just check)
+      - name: Build check
         run: python -c "print('Build OK')"
 
   test:
