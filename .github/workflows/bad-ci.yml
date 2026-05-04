@@ -5,6 +5,9 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./lab4-ci-cd
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -17,6 +20,9 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./lab4-ci-cd
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,6 +34,9 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./lab4-ci-cd
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -39,6 +48,9 @@ jobs:
 
   security:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./lab4-ci-cd
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -53,5 +65,5 @@ jobs:
     env:
       DB_PASSWORD: "supersecret123"
     steps:
-      - name: Deploy (leak secret)
+      - name: Deploy (potential leak)
         run: echo "Deploying ..."
