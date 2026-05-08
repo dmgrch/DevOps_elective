@@ -1,0 +1,23 @@
+name: Vault Real OIDC Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  use-secret:
+    runs-on: ubuntu-22.04
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: hashicorp/vault-action@v2
+        with:
+          url: https://881bb5e3969fcd.lhr.life
+          method: jwt
+          role: my-app-role
+          secrets: |
+            secret/data/db password | DB_PASS ;
+      - run: |
+          echo "Password length is ${#DB_PASS}"
+          echo "Deployment secure!"
