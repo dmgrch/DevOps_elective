@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: hashicorp/vault-action@v2
         with:
-          url: https://881bb5e3969fcd.lhr.life
+          url: https://d9fd18d0351a4b.lhr.life
           method: jwt
           role: my-app-role
           secrets: |
