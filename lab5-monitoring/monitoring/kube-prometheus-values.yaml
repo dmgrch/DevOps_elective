@@ -1,0 +1,6 @@
+grafana:
+  adminPassword: admin12345
+
+prometheus:
+  prometheusSpec:
+    retention: 2d
